@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeDev Academy - Aprenda Programação do Zero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header e Navegação -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <!-- Logo animada substituindo a anterior -->
+            <a href="#" class="logo">
+                <div class="code-icon">
+                    <div class="code-element bracket-left"></div>
+                    <div class="code-element bracket-right"></div>
+                    <div class="code-element code-line line1"></div>
+                    <div class="code-element code-line line2"></div>
+                    <div class="code-element code-line line3"></div>
+                    <div class="dot-pulse"></div>
+                </div>
+                <div class="logo-text">
+                    <h1 class="logo-name">
+                        <span class="name-part code">Code</span><span class="name-part dev">Dev</span>
+                    </h1>
+                    <div class="academy">Academy</div>
+                </div>
+            </a>
+            
+            <!-- Botão hamburguer e checkbox para controle do menu -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+            <label for="menu-toggle" class="hamburger-btn">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </label>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link active">Início</a></li>
+                    <li class="nav-item"><a href="#benefits" class="nav-link">Benefícios</a></li>
+                    <li class="nav-item"><a href="#courses" class="nav-link">Cursos</a></li>
+                    <li class="nav-item"><a href="#testimonials" class="nav-link">Depoimentos</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contato</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <button class="theme-toggle-btn" id="themeToggleBtn">🌙</button>
+                    <a href="#" class="cta-button">Matricule-se</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Domine o Código, "Domine o Futuro"!!!</h1>
+                <p class="hero-description">A CodeDev Academy oferece cursos de programação de alta qualidade com foco no mercado de trabalho. Aprenda habilidades práticas com desenvolvedores experientes e transforme sua carreira.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">Comece Hoje Mesmo ➡️</button>
+                    <button class="btn-secondary">Conheça Nossos Cursos 📚</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="./src/img/pc 3 (transparent icon).png" alt="Estudante de programação">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Benefícios -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Por que nos escolher</p>
+                <h2 class="section-title">Benefícios da CodeDev Academy</h2>
+                <p class="section-description">Nossa metodologia combina teoria e prática, preparando você para enfrentar os desafios reais do mercado de tecnologia.</p>
+            </div>
+            
+            <div class="benefits-container">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3 class="benefit-title">Aprendizado Acelerado</h3>
+                    <p class="benefit-description">Metodologia focada em resultados rápidos, com conteúdo direto ao ponto e exercícios práticos desde o primeiro dia.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">👨‍💻</div>
+                    <h3 class="benefit-title">Instrutores Experientes</h3>
+                    <p class="benefit-description">Aprenda com desenvolvedores que atuam no mercado e trazem casos reais para a sala de aula virtual.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔄</div>
+                    <h3 class="benefit-title">Conteúdo Atualizado</h3>
+                    <p class="benefit-description">Nossos cursos são constantemente atualizados com as tecnologias mais recentes e demandadas pelo mercado.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌐</div>
+                    <h3 class="benefit-title">Comunidade Ativa</h3>
+                    <p class="benefit-description">Faça parte de uma comunidade de alunos e profissionais para networking e troca de experiências.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏆</div>
+                    <h3 class="benefit-title">Projetos para Portfólio</h3>
+                    <p class="benefit-description">Desenvolva projetos práticos que podem ser incluídos no seu portfólio e impressionar recrutadores.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💼</div>
+                    <h3 class="benefit-title">Preparação para o Mercado</h3>
+                    <p class="benefit-description">Mentorias de carreira, dicas para entrevistas técnicas e conexão com empresas parceiras.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estatísticas -->
+    <section class="stats">
+        <div class="container stats-container">
+            <div class="stat-item">
+                <div class="stat-number">5000</div>
+                <div class="stat-label">Alunos formados</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15</div>
+                <div class="stat-label">Cursos disponíveis</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">98</div>
+                <div class="stat-label">Taxa de satisfação</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">85</div>
+                <div class="stat-label">Empregabilidade</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Depoimentos -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Depoimentos</p>
+                <h2 class="section-title">O que nossos alunos dizem</h2>
+                <p class="section-description">Veja como nossos cursos têm transformado carreiras e mudado vidas.</p>
+            </div>
+            
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <p class="testimonial-content">Eu não tinha conhecimento algum de programação e em menos de 6 meses consegui meu primeiro emprego como desenvolvedor front-end. A metodologia da CodeDev Academy é incrível e os professores são muito atenciosos.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RF</div>
+                        <div class="author-info">
+                            <h4>Rafael Ferreira</h4>
+                            <p>Desenvolvedor Front-end na TechSolutions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-content">Fiz a trilha de desenvolvimento web completa e o curso de React, e isso mudou completamente minha carreira. Os projetos práticos me deram confiança para aplicar para vagas mais desafiadoras.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">CA</div>
+                        <div class="author-info">
+                            <h4>Carolina Almeida</h4>
+                            <p>Desenvolvedora Full Stack na StartupXYZ</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-content">A comunidade da CodeDev é fantástica! Além do conhecimento técnico, o networking com outros alunos e as mentorias de carreira foram essenciais para conseguir minha primeira oportunidade na área.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">LM</div>
+                        <div class="author-info">
+                            <h4>Lucas Mendes</h4>
+                            <p>Desenvolvedor Back-end na DataTech</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Pronto para iniciar sua jornada na programação?</h2>
+                <p class="cta-description">Inscreva-se para receber informações exclusivas sobre nossos cursos, promoções e conteúdos gratuitos.</p>
+                <form class="cta-form">
+                    <input type="email" class="cta-input" placeholder="Seu melhor e-mail" required>
+                    <button type="submit" class="cta-button">Quero me inscrever</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <a href="#" class="footer-logo">
+                        <!-- Versão menor da logo animada no footer -->
+                        <div class="code-icon code-icon-footer">
+                            <div class="code-element bracket-left"></div>
+                            <div class="code-element bracket-right"></div>
+                            <div class="code-element code-line line1"></div>
+                            <div class="code-element code-line line2"></div>
+                            <div class="code-element code-line line3"></div>
+                            <div class="dot-pulse"></div>
+                        </div>
+                        <span>CodeDev Academy</span>
+                    </a>
+                    <p class="footer-description">Transformamos pessoas em desenvolvedores de sucesso através de ensino de qualidade, projetos práticos e suporte contínuo.</p>
+                    <div class="footer-social">
+                        <a href="#"><span>📱</span></a>
+                        <a href="#"><span>📷</span></a>
+                        <a href="#"><span>🐦</span></a>
+                        <a href="#"><span>💼</span></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-heading">Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#benefits">Benefícios</a></li>
+                        <li><a href="#courses">Cursos</a></li>
+                        <li><a href="#testimonials">Depoimentos</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-heading">Cursos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Desenvolvimento Web</a></li>
+                        <li><a href="#">JavaScript Avançado</a></li>
+                        <li><a href="#">React.js Masterclass</a></li>
+                        <li><a href="#">Node.js e APIs</a></li>
+                        <li><a href="#">Python para Dados</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-heading">Contato</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="footer-contact-icon">📍</span>
+                            <span>Av. Tecnologia, 1000 - São Paulo, SP</span>
+                        </li>
+                        <li>
+                            <span class="footer-contact-icon">📞</span>
+                            <span>(11) 9 9999-9999</span>
+                        </li>
+                        <li>
+                            <span class="footer-contact-icon">✉️</span>
+                            <span>contato@codedev.com.br</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 CodeDev Academy. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button class="back-to-top" id="backToTop">⬆️</button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

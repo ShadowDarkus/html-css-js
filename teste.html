@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo CodeDev Academy - Versão Geométrica</title>
+    <style>
+        :root {
+            --primary-color: #6c63ff;
+            --secondary-color: #00c9a7;
+            --accent-color: #ff6584;
+            --dark-color: #121212;
+            --light-color: #f9fafb;
+            --animation-duration: 4s;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: var(--light-color);
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Geometrical Code Icon */
+        .code-icon {
+            position: relative;
+            width: 90px;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .code-element {
+            position: absolute;
+            background: var(--primary-color);
+            transform-origin: center;
+            opacity: 0;
+        }
+
+        /* Left Bracket */
+        .bracket-left {
+            width: 8px;
+            height: 60px;
+            border-radius: 4px;
+            left: 10px;
+            animation: fadeInLeft var(--animation-duration) infinite;
+        }
+
+        .bracket-left::before,
+        .bracket-left::after {
+            content: '';
+            position: absolute;
+            background: inherit;
+            width: 20px;
+            height: 8px;
+            border-radius: 4px;
+        }
+
+        .bracket-left::before {
+            top: 0;
+            left: 0;
+            transform-origin: left;
+            animation: rotateTopLeft var(--animation-duration) infinite;
+        }
+
+        .bracket-left::after {
+            bottom: 0;
+            left: 0;
+            transform-origin: left;
+            animation: rotateBottomLeft var(--animation-duration) infinite;
+        }
+
+        /* Right Bracket */
+        .bracket-right {
+            width: 8px;
+            height: 60px;
+            border-radius: 4px;
+            right: 10px;
+            animation: fadeInRight var(--animation-duration) infinite;
+        }
+
+        .bracket-right::before,
+        .bracket-right::after {
+            content: '';
+            position: absolute;
+            background: inherit;
+            width: 20px;
+            height: 8px;
+            border-radius: 4px;
+        }
+
+        .bracket-right::before {
+            top: 0;
+            right: 0;
+            transform-origin: right;
+            animation: rotateTopRight var(--animation-duration) infinite;
+        }
+
+        .bracket-right::after {
+            bottom: 0;
+            right: 0;
+            transform-origin: right;
+            animation: rotateBottomRight var(--animation-duration) infinite;
+        }
+
+        /* Code Lines */
+        .code-line {
+            height: 4px;
+            border-radius: 2px;
+            left: 25px;
+            right: 25px;
+        }
+
+        .code-line.line1 {
+            top: 25px;
+            width: 40px;
+            background: var(--secondary-color);
+            animation: drawLine1 var(--animation-duration) infinite;
+        }
+
+        .code-line.line2 {
+            top: 38px;
+            width: 25px;
+            background: var(--accent-color);
+            animation: drawLine2 var(--animation-duration) infinite;
+        }
+
+        .code-line.line3 {
+            top: 51px;
+            width: 35px;
+            background: var(--secondary-color);
+            animation: drawLine3 var(--animation-duration) infinite;
+        }
+
+        /* Dot Pulse */
+        .dot-pulse {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            z-index: -1;
+            animation: pulse var(--animation-duration) infinite;
+        }
+
+        /* Logo Text */
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .logo-name {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .name-part {
+            display: inline-block;
+            opacity: 0;
+        }
+
+        .code {
+            color: var(--primary-color);
+            animation: fadeInText var(--animation-duration) infinite;
+            animation-delay: 1.5s;
+        }
+
+        .dev {
+            color: var(--secondary-color);
+            animation: fadeInText var(--animation-duration) infinite;
+            animation-delay: 1.8s;
+        }
+
+        .academy {
+            color: var(--dark-color);
+            font-size: 20px;
+            font-weight: 500;
+            margin-top: 5px;
+            opacity: 0;
+            animation: fadeInUp var(--animation-duration) infinite;
+            animation-delay: 2.2s;
+        }
+
+        /* Animations */
+        @keyframes fadeInLeft {
+            0%, 10% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            20%, 90% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+        }
+
+        @keyframes fadeInRight {
+            0%, 10% {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            20%, 90% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+        }
+
+        @keyframes rotateTopLeft {
+            0%, 15% {
+                transform: rotate(0deg);
+            }
+            25%, 90% {
+                transform: rotate(90deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes rotateBottomLeft {
+            0%, 15% {
+                transform: rotate(0deg);
+            }
+            25%, 90% {
+                transform: rotate(-90deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes rotateTopRight {
+            0%, 15% {
+                transform: rotate(0deg);
+            }
+            25%, 90% {
+                transform: rotate(-90deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes rotateBottomRight {
+            0%, 15% {
+                transform: rotate(0deg);
+            }
+            25%, 90% {
+                transform: rotate(90deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes drawLine1 {
+            0%, 30% {
+                opacity: 0;
+                width: 0;
+                left: 45px;
+            }
+            40%, 85% {
+                opacity: 1;
+                width: 40px;
+                left: 25px;
+            }
+            95%, 100% {
+                opacity: 0;
+                width: 0;
+                left: 45px;
+            }
+        }
+
+        @keyframes drawLine2 {
+            0%, 35% {
+                opacity: 0;
+                width: 0;
+                left: 45px;
+            }
+            45%, 80% {
+                opacity: 1;
+                width: 25px;
+                left: 32px;
+            }
+            90%, 100% {
+                opacity: 0;
+                width: 0;
+                left: 45px;
+            }
+        }
+
+        @keyframes drawLine3 {
+            0%, 40% {
+                opacity: 0;
+                width: 0;
+                left: 45px;
+            }
+            50%, 75% {
+                opacity: 1;
+                width: 35px;
+                left: 28px;
+            }
+            85%, 100% {
+                opacity: 0;
+                width: 0;
+                left: 45px;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 20% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0;
+            }
+            30% {
+                transform: translate(-50%, -50%) scale(3);
+                opacity: 0.5;
+            }
+            40% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeInText {
+            0%, 10% {
+                opacity: 0;
+                transform: translateY(100%);
+            }
+            25%, 90% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(100%);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0%, 30% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            45%, 85% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+        }
+
+        /* Canvas Background */
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 480px) {
+            .logo-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo-name {
+                font-size: 28px;
+            }
+
+            .academy {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="background"></canvas>
+    <div class="logo-container">
+        <div class="code-icon">
+            <div class="code-element bracket-left"></div>
+            <div class="code-element bracket-right"></div>
+            <div class="code-element code-line line1"></div>
+            <div class="code-element code-line line2"></div>
+            <div class="code-element code-line line3"></div>
+            <div class="dot-pulse"></div>
+        </div>
+        <div class="logo-text">
+            <h1 class="logo-name">
+                <span class="name-part code">Code</span><span class="name-part dev">Dev</span>
+            </h1>
+            <div class="academy">Academy</div>
+        </div>
+    </div>
+
+    <script>
+        // Background canvas effect
+        const canvas = document.getElementById('background');
+        const ctx = canvas.getContext('2d');
+        
+        // Set canvas size
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+        
+        // Configuration
+        const config = {
+            particleCount: 50,
+            particleSize: 2,
+            connectionDistance: 150,
+            colors: ['#6c63ff20', '#00c9a720', '#ff658420'],
+            speed: 0.5
+        };
+        
+        // Create particles
+        let particles = [];
+        
+        function initParticles() {
+            particles = [];
+            for (let i = 0; i < config.particleCount; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * config.speed,
+                    vy: (Math.random() - 0.5) * config.speed,
+                    size: Math.random() * config.particleSize + 1,
+                    color: config.colors[Math.floor(Math.random() * config.colors.length)]
+                });
+            }
+        }
+        
+        // Animation loop
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Update and draw particles
+            for (let i = 0; i < particles.length; i++) {
+                const p = particles[i];
+                
+                // Update position
+                p.x += p.vx;
+                p.y += p.vy;
+                
+                // Boundary check
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+                
+                // Draw particle
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fillStyle = p.color;
+                ctx.fill();
+                
+                // Connect particles
+                for (let j = i + 1; j < particles.length; j++) {
+                    const p2 = particles[j];
+                    const dx = p.x - p2.x;
+                    const dy = p.y - p2.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < config.connectionDistance) {
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        const opacity = 1 - (distance / config.connectionDistance);
+                        ctx.strokeStyle = `rgba(108, 99, 255, ${opacity * 0.15})`;
+                        ctx.lineWidth = 1;
+                        ctx.stroke();
+                    }
+                }
+            }
+            
+            requestAnimationFrame(animate);
+        }
+        
+        // Initialize and start animation
+        initParticles();
+        animate();
+    </script>
+</body>
+</html>
